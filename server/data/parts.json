@@ -1,0 +1,59 @@
+{
+  "partTypes": [
+    "productLine",
+    "lockChip",
+    "blade",
+    "metalBlade",
+    "mainBlade",
+    "assistBlade",
+    "overBlade",
+    "ratchet",
+    "bit"
+  ],
+  "parts": {
+    "productLine": [
+      { "name": "BX", "requiredParts": [] },
+      { "name": "UX", "requiredParts": [] },
+      { "name": "CX", "requiredParts": [] }
+    ],
+    "lockChip": [
+      { "name": "ワルキューレ", "requiredParts": ["blade", "bit"] },
+      { "name": "エンペラー", "requiredParts": ["blade", "ratchet"] },
+      { "name": "その他", "requiredParts": [] }
+    ],
+    "blade": [
+      { "name": "A", "requiredParts": ["lockChip", "bit"] },
+      { "name": "B", "requiredParts": ["ratchet"] },
+      { "name": "C", "requiredParts": [] }
+    ],
+    "metalBlade": [
+      { "name": "MB-1", "requiredParts": ["mainBlade"] },
+      { "name": "MB-2", "requiredParts": ["mainBlade", "assistBlade"] }
+    ],
+    "mainBlade": [
+      { "name": "MN-1", "requiredParts": ["metalBlade"] },
+      { "name": "MN-2", "requiredParts": ["metalBlade", "overBlade"] }
+    ],
+    "assistBlade": [
+      { "name": "G", "requiredParts": ["mainBlade"] },
+      { "name": "H", "requiredParts": ["mainBlade"] },
+      { "name": "I", "requiredParts": [] }
+    ],
+    "overBlade": [
+      { "name": "D", "requiredParts": ["assistBlade"] },
+      { "name": "E", "requiredParts": [] },
+      { "name": "F", "requiredParts": [] }
+    ],
+    "ratchet": [
+      { "name": "1:50", "requiredParts": ["blade"] },
+      { "name": "1:60", "requiredParts": [] },
+      { "name": "1:70", "requiredParts": ["bit"] },
+      { "name": "1:80", "requiredParts": [] }
+    ],
+    "bit": [
+      { "name": "M", "requiredParts": ["ratchet"] },
+      { "name": "N", "requiredParts": [] },
+      { "name": "O", "requiredParts": [] }
+    ]
+  }
+}
