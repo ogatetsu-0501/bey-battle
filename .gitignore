@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.tsbuildinfo
+server/python/__pycache__/
+server/java/src/*.class
